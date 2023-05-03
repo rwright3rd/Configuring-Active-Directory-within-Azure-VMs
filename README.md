@@ -48,7 +48,7 @@ After the virtual machines setup in Azure, I connected to the domain controler (
 </p>
 <p>
 
-I then setup a new forest with my new domian. For this example it was "mydomain.com". I then created new organizational units for EMPLOYEES and ADMIN. Active Directory is now setup with EMPLOYEES and ADMIN organizational units. You can now create or adjust password/username settings and policies.
+I then setup a new forest with my new domian. For this example it was "mydomain.com". I then created new organizational units for EMPLOYEES and ADMIN. Active Directory is now setup with EMPLOYEES and ADMIN organizational units.
 </p>
 <br />
 
@@ -57,5 +57,13 @@ I then setup a new forest with my new domian. For this example it was "mydomain.
 </p>
 <p>
 I then opened up Powershell ISE and ran a script to add hundreds of random users (randomly created) to my EMPLOYEES organizational unit in Active Directory.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/HElZJpR.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Once the users/EMPLOYEES are created, you can now create or adjust password/username settings and policies.
 </p>
 <br />
