@@ -20,33 +20,42 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Setup Resources in Azure
+- Ensure Connectivity between the client and Domain Controller
+- Install Active Directory
+- Created Users using Powershell
 
 <h2>Deployment and Configuration Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/E7RhYGg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+I signed on to Microsoft Azure and created two virtual machines. The first is a "Client-1" Win 10 VM, which will be used as a "user" account. The second is my domain controler "DC-1" Win Server 22 VM. 
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/Yeenxuh.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+After the virtual machines setup in Azure, I connected to the domain controler (DC-1/ WIN Server 22) VM with remote desktop using the public IP address.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/QykQM1d.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+
+I then setup a new forest with my new domian. For this example it was "mydomain.com". I then created new organizational units for EMPLOYEES and ADMIN. Active Directory is now setup with EMPLOYEES and ADMIN organizational units. You can now create or adjust password/username settings and policies.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/9N7biKH.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+I then opened up Powershell ISE and ran a script to add hundreds of random users (randomly created) to my EMPLOYEES organizational unit in Active Directory.
 </p>
 <br />
